@@ -1,0 +1,152 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Architects+Daughter&family=Dancing+Script&family=Nanum+Gothic&family=Noto+Sans+KR&display=swap');
+
+
+
+/* section구역 */
+.main .article1 {height: 650px; position: relative;}
+.slide_group {position: relative;}
+.article1 .playstop {position: absolute; bottom: 11px; left: 50%; margin-left: 45px; color: rgba(255, 255, 255, 0.9); 
+                     border: none; background: none; font-size: 18px;}
+.slide_group .slick-arrow {position: absolute; top: 50%; transform: translateY(-50%);
+                           border: none; background: none; z-index: 9999; font-size: 80px; color:#fff;}
+.slide_group .prev {left: 70px;}
+.slide_group .next {right: 70px;}
+.slide_group .slick-dots {position: absolute; bottom: 15px; left: 0; right: 0; text-align: center;}
+.slide_group .slick-dots li {display: inline-block; margin: 0 5px}
+.slide_group .slick-dots li button {width: 16px; height: 16px; border-radius: 50%; color: transparent; background:rgba(255, 255, 255, 0.5);
+                                    border: none; text-indent: -9999px;}
+.slide_group .slick-dots li.slick-active button {background: none; border: 2px solid rgba(255, 255, 255, 1)}
+.slide_group .slide1 {background: url(../img/main_img1.jpg) no-repeat center;
+                      height: 650px; position: relative;  background-size: cover;}
+.slide_group .slide2 {background: url(../img/main_img2.jpg) no-repeat center;
+                      height: 650px; position: relative;  background-size: cover;}
+.slide_group .slide3 {background: url(../img/main_img3.jpg) no-repeat center;
+                      height: 650px; position: relative;  background-size: cover;}
+.slide_group .slidetext {position: absolute; top: 40%; left: 10px; right: 10px;
+                         text-align: center; color: #fff; transform: translateY(-50%); 
+                         word-break: keep-all; overflow: hidden; text-overflow: ellipsis;}
+.slide_group .slide.slick-cloned .slidetext {opacity: 0;}
+.slide_group .slide.slick-active .slidetext h1 {animation: fadeInDown 0.5s both 0.3s;}                     
+.slide_group .slidetext h1 {font-size: 42px; line-height: 50px; font-weight: 800;}
+.slide_group .slidetext p {font-size: 16px; line-height: 24px; font-weight: 400; margin: 30px 0;}
+.slide_group .slide.slick-active .slidetext p {animation: fadeInDown 0.5s both 0.8s;} 
+.slide_group .slidetext a {display: inline-block; font-size: 15px; padding:8px 35px; font-weight: 400;
+                            border: 1px solid #fff;}
+.slide_group .slide.slick-active .slidetext a {animation: fadeInUp 0.5s both 1.3s;} 
+.slide_group .slidetext > a:hover {background:rgba(255, 255, 255, 0.3);}
+
+#section h2 {color: #000; font-size: 36px; line-height: 42px; font-weight: 700; 
+             padding: 80px 0 10px; text-align: center;}
+.article2 > p, .article4 > p {padding-bottom: 40px; text-align: center; line-height: 1.5;
+                              word-break: keep-all; overflow: hidden; text-overflow: ellipsis;}
+.article2 li {height: 520px; float: left; width: 24%; margin-right: 1.3333%; color: #fff; 
+              position: relative; overflow: hidden; background-size: cover;
+              background-position: center; background-repeat: no-repeat;}
+.article2 li:nth-child(1) {background-image: url(../img/what1.jpg)}
+.article2 li:nth-child(2) {background-image: url(../img/what2.jpg)}
+.article2 li:nth-child(3) {background-image: url(../img/what3.jpg)}
+.article2 li:nth-child(4) {background-image: url(../img/what4.jpg); margin-right: 0;}        
+                                                
+/* 방법1(밑→위 뜨게 하는 방법)
+.article2 li > div {position: absolute; bottom:-180px; left: 25px; right: 25px; transition: all 0.5s;}
+.article2 li:hover > div {bottom:25px;} */
+/* 방법2 (제자리에서 뜨게 하는 방법)
+.article2 li > div {position: absolute; bottom:25px; left: 25px; right: 25px; transition: all 0.5s; 
+                    opacity: 0;}
+.article2 li:hover > div {opacity: 1;} */
+/* 방법3 (왼쪽→오른쪽 뜨게 하는 방법)
+.article2 li > div {position: absolute; bottom:25px; left: 25px; right: 25px; transition: all 0.5s; 
+                    opacity: 1; transform: translate(-120%);}
+.article2 li:hover > div {opacity: 1; transform: translate(0%)} */
+/*  위→아래 뜨게 하는 방법 */
+.article2 li > div {position: absolute; bottom:25px; left: 25px; right: 25px; transition: all 0.5s; 
+                    opacity: 0; transform: translateY(-100%);}
+.article2 li:hover > div { opacity: 1; transform: translateY(0%)}
+.article2 li > div > h3 {font-size: 24px; line-height: 32px; font-weight: 500;}
+.article2 li > div > p {padding: 20px 0; line-height: 1.2; font-size: 14px;}
+.article2 li > div > a {display: inline-block; padding: 10px 40px; border: 1px solid rgba(255,255,255,0.5); 
+                        font-size: 11px; font-weight: 600 !important;}
+.article2 li > div > a:hover {background: rgba(255,255,255,0.3);}
+
+.article3 {height: 304px; background: url(../img/intro_bg.jpg) no-repeat center top; background-size: cover;
+           margin-top: 100px; color:#fff; text-align:center; background-attachment: fixed;} /* 패럴렉스 이미지*/
+.article3 h2 {color: #fff !important}
+.article3 p {padding: 15px 0 15px}
+.article3 a {font-size: 13px; padding: 10px 30px; display: inline-block; border: 1px solid rgba(255,255,255,0.5);}
+.article3 a:hover {background: rgba(255,255,255,0.3); }
+
+.article4 li {float: left; width: 32%; margin-right: 2%; margin-bottom: 20px;
+              border: 1px solid #999; text-align: center;}
+.article4 li:nth-child(3n) {margin-right: 0;}
+.article4 li h4 {font-size: 17px; margin: 25px; font-weight: bold; color: #000;}
+.article4 li p {font-size: 14px; margin: 25px;}
+.article4 li > div {overflow: hidden; position: relative; transition: all 0.4s;}
+.article4 li > div::before {content: ''; top:0 ; left: 0; bottom: 0; right: 0; position: absolute; 
+                            background: rgba(0, 0, 0, 0.5); opacity: 0;}
+.article4 li > div:hover::before {opacity: 1; z-index: 9;}      
+.article4 li .zoom {position: absolute; top: 50%; left: 50%;
+                    font-size: 30px; color: #fff; opacity: 0; transition: all 0.4s 0.2s;}
+.article4 li > div:hover .zoom {opacity: 1; z-index: 10;} 
+.article4 li img {transition: all 0.5s;}
+.article4 div:hover img {transform: scale(1.2) rotate(-2deg);}
+         /* 호버시 ::before나 ::after 박스가 중간에 생기면, 마우스가 이미지를 가리킬 수 없으므로,
+            부모에게 호버했을때 이미지 스케일이 커지도록 함 */
+.article4 .more a {display: block; width: 34px; height: 34px; margin: 30px auto 0; position: relative;
+                   border: 2px solid #adadad; border-radius: 50%; box-sizing: unset; 
+                   transition: all 0.4s;}
+.article4 .more a::before {content: ''; width: 2px; height: 34px; background: #adadad;
+                           position: absolute; top:0; left: 50%; margin-left: -1px;}
+.article4 .more a::after {content: '';  width: 34px; height: 2px; background: #adadad;
+                          position: absolute; top:50%; left: 0; margin-top: -1px;}
+.article4 .more a:hover {transform: rotate(90deg);}
+
+.article5 {padding: 30px 0; margin-top: 50px; border-top: 1px solid #ddd}
+.article5 .row {overflow: hidden}
+.article5 .row > div {width: 33.33%; float: left;}
+.article5 .row .cs_board {padding-right: 30px;}
+.cs_board .tabmenu {overflow: hidden; border-bottom: 1px solid #ddd;}
+.cs_board .tabmenu li {float: left; border: 1px solid #ddd; border-bottom: none; padding: 10px 20px;
+                       cursor: pointer;}
+.cs_board .tabmenu li.active {background: #ddd; color: green;}
+.cs_board .contents > div {display: none}
+.cs_board .contents > div.active {display: block}
+.cs_board .contents table {font-size: 14px;}
+.cs_board .contents col:nth-child(1) {width: auto;}
+.cs_board .contents col:nth-child(2) {width: 100px;}
+.cs_board .contents td {border-bottom: 1px solid #ddd; padding: 9px 5px;}
+.cs_board .contents td:nth-child(1) {white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.cs_board .contents td:nth-child(2) {text-align: right;}
+.cs_board .contents {position: relative;}
+.cs_board .contents .more {position: absolute; bottom: 100%; right: 0; padding: 5px; background: #eee;
+                           margin-bottom: 7px; border-radius: 3px; line-height: 1.5;}
+.article5 .row .cs_center {border-left: 1px solid #ddd; border-right:1px solid #ddd;  
+                           padding: 0 30px;}
+.article5 .row .cs_center h4 {color: #000; font-size: 20px; line-height: 28px; 
+                                   padding-bottom: 15px; font-weight: 500;}
+.article5 .cs_center li {font-size: 13px; line-height: 20px; margin: 2px 0; text-indent: 0px; 
+                         padding-left: 10px; position: relative;}
+.article5 .cs_center li::before {content:""; width: 3px; height: 3px; background: #666; 
+                                border-radius: 50%; position: absolute; left: 0; top: 50%; 
+                                transform: translateY(-50%);}
+.article5 .cs_center li a {text-indent: 0px;}
+.article5 .cs_center li.tel_num {color: #ed5c20; font-size: 30px; line-height: 36px; font-weight: 700; 
+                                 font-family:'Montserrat',sans-serif; padding-bottom: 10px; 
+                                 padding-left: 0px;}
+.article5 .cs_center li.cs_btn::before, .article5 .cs_center li.tel_num::before {display: none;}
+.article5 .cs_center li.cs_btn {padding-top: 20px !important; padding: 0; text-indent: 0; margin: 0; 
+                                font-size: 0; text-align: center;}
+.article5 .cs_center li.cs_btn a {display: inline-block; width: 46%; margin: 1%; border-radius: 3px; 
+                                  color: #FFF; padding: 10px; font-size: 14px; 
+                                  text-align: center;}
+.article5 .cs_center li.tel_num i {transform: rotateY(180deg) scale(0.7)}
+.article5 .cs_center a.cs_btn {background: #787878;}
+.article5 .cs_center a.cs_btn:hover {background: #555;}
+.article5 .cs_center a.cs_btn2 {background: #001f60;}
+.article5 .cs_center a.cs_btn2:hover {background: #00113c;}   
+.article5 .row div.cs_movie {padding-left: 30px;}
+/* 유투브 동영상 스타일 공식 */
+/* .article5 .cs_movie .tubewrap {width: 100%; padding-top: 56.25%; position: relative;}
+.article5 .cs_movie .tubewrap iframe {position: absolute;  top: 0; left: 0;} */
+
+

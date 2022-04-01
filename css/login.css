@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+legend  {display: none}
+
+.loginBox {padding-top: 180px; padding-bottom: 180px }
+.loginBox h2 {font-size: 30px; padding: 40px 0 }
+.loginBox .outer {border: 1px solid #ddd; margin: 20px 0; padding: 67px 0; 
+                  text-align: center;}
+.loginBox .outer div {display: inline-block; vertical-align: middle;} 
+.loginBox .outer label {width: 70px; display: inline-block; text-align: left; 
+                        vertical-align: middle;}
+.loginBox .outer input {height: 35px; width: 200px; vertical-align: middle;}
+.loginBox .outer p {margin: 10px 0;}
+.loginBox .outer button {width: 100px; height: 80px; vertical-align: middle; border: none;
+                         background: #555; color: #fff; border-radius: 5px;}

@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Architects+Daughter&family=Dancing+Script&family=Nanum+Gothic&family=Noto+Sans+KR&display=swap');
+
+
+.row {max-width: 1200px; padding: 0px 10px; margin: 0 auto;}
+body {color:#666; font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
+button {outline: none;}
+
+/* header구역 */
+/* #header {position: relative } */
+#header.on .topmenu {display: none}
+#header.on {position: fixed; width: 100%; background: #fff; top: 0; left: 0; z-index: 999999;}  
+#header .topmenu {background: #f3f3f3; font-size: 12px; color:#999; text-align: right;}
+#header .topmenu a {display: inline-block; border-right: 1px solid #e3e3e3; padding: 5px 15px;}
+#header .topmenu a:nth-of-type(1) {border-left: 1px solid #e3e3e3}
+#header .topmenu a:hover {color:#dbb075}
+
+/* 검색창 */
+#header .search {position: absolute; right: 290px; top: 50%; transform: translateY(-50%);}
+#header .search #sbox {border: none; text-indent: 1em; width: 0; outline: none;
+                       overflow: hidden; transition: all 0.5s;}
+#header .search #sbox.on {width: 169px;}
+#header .row {position: relative}
+#header h1 {float: left; padding: 15px 0;}
+#header .open, #header .close {display: none;}
+#nav {text-align: center; float: right; }
+#nav .depth1 {color:#1e1e1e; font-size: 18px; padding: 10px 0;}
+#nav .depth1 > li {position: relative; display: inline-block; padding: 20px 30px 10px 30px;}
+#nav .depth1 > li > a {padding: 0 10px ;}
+/* #nav .depth1 > li.on .depth2 {display: block;} */
+#nav .depth1 > li > a:hover {color:#00529b}
+#nav .depth2 {position: absolute; width: 100%; top: 100% ; left: 0; background: #555 ;
+              font-size: 14px; color: #fff ; z-index: 9999; text-align: center;
+              display: none}
+#nav .depth2 li {padding: 13px 0; border-top: 1px solid #777;}
+#nav .depth2 > li:hover {background: #00529b; color:#dfe9fe}
+
+
+/* footer구역 */
+#footer {margin-top: 0px; background: #333; padding: 30px 0; text-align: center; font-size: 12px;
+         line-height: 18px; color: #ddd;}
+#footer .sns a {font-size:14px; display: inline-block; width: 32px; height: 32px; margin: 0 5px;
+                background: rgba(255, 255, 255, 0.1); border-radius: 50%; line-height: 32px;
+                margin:0px 5px 10px; transition: all 0.3s;} 
+#footer .sns a:hover {background: rgba(255, 255, 255, 0.3); transform: scale(1.1);}
+#footer .sns a i {transition: all 0.5;}
+#footer .sns a:hover i {transform: scale(1.1);}
+#footer .info p {padding: 10px 0px ;}
+#footer .info span {padding: 5px 20px ;}
+#footer .privacy > a, #footer .privacy > span {font-size: 11px; padding: 3px 10px; display: inline-block; 
+                                               transition: all 0.4s; border: 1px solid rgba(255,255,255,0.5) ; 
+                                               color:#bbb}   
+#footer .privacy > a:hover, #footer .privacy > span:hover {background: #999; border: 1px solid #999; color: #fff;}
+#footer .fam {position: relative; cursor: pointer;}
+#footer .fam ul {position: absolute; bottom: 100%; left: 0; width: 100%;
+                 padding: 5px; background: #fff; color: #000; display: none;}
+.gotop {position: fixed; right: 10px; bottom: 10px;}
+.gotop a {width: 45px; height: 45px; display:inline-block;
+          background:rgba(0,0,0,0.6); color: #fff; text-align: center; padding-top: 3px;
+          border-radius: 3px;}
+
+

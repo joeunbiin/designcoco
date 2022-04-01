@@ -1,0 +1,4 @@
+@charset "utf-8";
+
+.eventBox {max-width: 700px; margin: 50px auto;}
+.eventBox > div {margin: 50px 0;}
